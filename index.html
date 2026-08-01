@@ -43,8 +43,7 @@
   -->
   <script src="flutter_bootstrap.js" async></script>
 <script>
-/* SW-KILL — evict any service worker or cache from a previous deploy so
-   players always get the build that is actually live. */
+/* SW-KILL — evict any service worker or cache from an earlier deploy. */
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.getRegistrations()
     .then(rs => rs.forEach(r => r.unregister())).catch(() => {});
